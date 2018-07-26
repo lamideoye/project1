@@ -8,8 +8,21 @@
     <header>
         <h1>Browse our catalogue of books and give your ratings</h1>
         <p>To login, click <a href="{{ url_for("login")}}">here</a></p>
-        {% for book in books %}
-            print book
-        {% endfor %}
+            <table>
+                <tr>
+                    <th>ISBN</th>
+                    <th>TITLE</th>
+                    <th>AUTHOR</th>
+                    <th>YEAR</th>
+                </th>
+                {% for book in books %}
+                <tr>
+                    <td>{{ book.isbn }}</td>
+                    <td>{{ book.title }}</td>
+                    <td>{{ book.author }}</td>
+                    <td>{{ book.year}}</td>
+                </tr>
+                {% endfor %}
+            </table>
     </header>
 {% endblock %}
