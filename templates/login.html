@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Book Reviews
+{% endblock %}
+
+{% block body %}
+    <div class='article'>
+        <h2>Welcome</h2>
+        <p>Welcome to my book review page. You can view book information and give a review on the books.</p>
+    </div>
+    <form class="container">
+        
+        <p class='new_user'>First time here?</p><a class='new_user' href="{{ url_for("accounts")}}">Create an account</a>
+        
+        <p>Username</p>
+        <input type="text" placeholder="Username">
+
+        <p>Password</p>
+        <input type="password" placeholder="Password">
+
+        
+        <p><a href="{{ url_for("accounts")}}">Forgot password?</a></p>
+
+        <div class="btn-login">
+            <button type="submit">Login</button>
+        </div>
+    </form>
+{% endblock %}
