@@ -25,7 +25,7 @@ db = scoped_session(sessionmaker(bind=engine))
 
 @app.route("/")
 def index():
-    books = db.execute("SELECT * FROM books LIMIT 10").fetchall()
+    books = db.execute("SELECT * FROM books LIMIT 20").fetchall()
     return render_template('index.html', books=books)
 
 @app.route("/login")
